@@ -28,6 +28,16 @@ For the remote host (server A) to be able to connect to server B, mysql-server i
     
   ![bind_server_client](https://user-images.githubusercontent.com/122198373/211243901-bfea8a3f-2757-403a-8689-37245003955a.png)  
 
+Configure MysQL-server and create database and a user
+
+    Set up a password with sudo mysql_secure_installation and create a user
+    Create user
+
+![MYsql_server_USER_CREATED](https://user-images.githubusercontent.com/122198373/211245174-070da34b-030a-4401-854f-e6c972f321fc.png)
+
+Add a rule to the security group by Opening port 3306 on Mysql-server to allow for connection. Both server can communicate using private IPs since they belong to the same subnet 
+
+
 
 # Step III: Install MySQL-Client form server B
 On mysql client Linux Server install MySQL Client software. 
