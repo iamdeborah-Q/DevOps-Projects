@@ -21,13 +21,14 @@ On the Mysql-server  install MySQL Server software.
 ![server_status_checked-original](https://user-images.githubusercontent.com/122198373/211242789-45dfe6c1-d9a5-434b-b161-488d4707ca58.png)
 
 
-For the remote host(server B) to be able to connect to server B, mysql-server is configured to allow connections from server B:
+For the remote host (server A) to be able to connect to server B, mysql-server is configured to allow connections from server B:
 
-    Editing the mysqld.cnf file: $ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
-    Changing the value of bind-address from ‘127.0.0.1’ to ‘0.0.0.0’: 
+    Edit the mysqld.cnf file: $ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    Change the bind-address from ‘127.0.0.1’ to ‘0.0.0.0’ to allow connection from any IP address: 
     
-    
+  ![bind_server_client](https://user-images.githubusercontent.com/122198373/211243901-bfea8a3f-2757-403a-8689-37245003955a.png)  
 
 
+# Step III: Install MySQL-Client form server B
 On mysql client Linux Server install MySQL Client software. 
 ![MYSQL_CLINET_INSATLLED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211243301-4ee1ea97-0856-40e8-ad95-713e489f00ac.png)
