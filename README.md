@@ -1,2 +1,2 @@
 # DevOps-Projects
-This is where I keep all my Devops Projects
+# Welcome to my Implementation of Intensive DevOps Projects on the Darey.io Professional DevOps Bootcamp
