@@ -14,4 +14,5 @@ Note: Make sure both instances are on same subnet
 ![EC2_CREATED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211241415-b798cc99-3841-4c2f-82f8-04b64a718beb.png)
 
  
- On the Mysql-server  install MySQL Server software. 
+On the Mysql-server  install MySQL Server software. 
+![SERVER_INSTALLED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211242412-f3148b34-5001-4f5b-8649-f2417fcadd85.png)
