@@ -15,7 +15,19 @@ Note: Make sure both instances are on same subnet
 ![EC2_CREATED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211241415-b798cc99-3841-4c2f-82f8-04b64a718beb.png)
 
  
-# Step II: 
+# Step II: Installing MySQL server in Server-A
 On the Mysql-server  install MySQL Server software. 
 ![SERVER_INSTALLED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211242412-f3148b34-5001-4f5b-8649-f2417fcadd85.png)
 ![server_status_checked-original](https://user-images.githubusercontent.com/122198373/211242789-45dfe6c1-d9a5-434b-b161-488d4707ca58.png)
+
+
+For the remote host(server B) to be able to connect to server B, mysql-server is configured to allow connections from server B:
+
+    Editing the mysqld.cnf file: $ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    Changing the value of bind-address from ‘127.0.0.1’ to ‘0.0.0.0’: 
+    
+    
+
+
+On mysql client Linux Server install MySQL Client software. 
+![MYSQL_CLINET_INSATLLED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211243301-4ee1ea97-0856-40e8-ad95-713e489f00ac.png)
