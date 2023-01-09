@@ -46,3 +46,10 @@ Add a rule to the security group by Opening port 3306 on Mysql-server to allow f
 # Step III: Install MySQL-Client form server B
 On mysql client Linux Server install MySQL Client software. 
 ![MYSQL_CLINET_INSATLLED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211243301-4ee1ea97-0856-40e8-ad95-713e489f00ac.png)
+
+
+From mysql-client Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action. 
+
+![conneted_withIP_adress](https://user-images.githubusercontent.com/122198373/211247028-41e53a35-5029-479b-bd54-4e284de0290b.png)
+
+Connection establihed..!
