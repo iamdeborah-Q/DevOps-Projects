@@ -11,3 +11,7 @@ To demonstrate a basic client-server architecture using MySQL, two virtual serve
     Server A – ‘mysql-server’
     Server B – ‘mysql-client’
 Note: Make sure both instances are on same subnet
+![EC2_CREATED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211241415-b798cc99-3841-4c2f-82f8-04b64a718beb.png)
+
+ 
+ On the Mysql-server  install MySQL Server software. 
