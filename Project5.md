@@ -4,3 +4,10 @@ Client-server refers to architecture in which two or more computers are connecte
 
 # Project Architecture
 ![Client-server2_IMAGE](https://user-images.githubusercontent.com/122198373/211237432-e6565178-9aad-4702-99db-02a0cc26aaed.png)
+
+
+To demonstrate a basic client-server architecture using MySQL, two virtual servers(ubuntu 20.04 LTS) were launched in AWS cloud and are designated as;
+
+    Server A – ‘mysql-server’
+    Server B – ‘mysql-client’
+Note: Make sure both instances are on same subnet
