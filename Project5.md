@@ -37,6 +37,10 @@ Configure MysQL-server and create database and a user
 
 Add a rule to the security group by Opening port 3306 on Mysql-server to allow for connection. Both server can communicate using private IPs since they belong to the same subnet 
 
+![CLIENT_sever_IP](https://user-images.githubusercontent.com/122198373/211246464-86b0b227-2f84-44f4-9916-f3e0c29df99f.png)
+![IP_CONNECTED](https://user-images.githubusercontent.com/122198373/211246485-54d5acef-0de5-4d2c-b324-b07bb0869984.png)
+
+
 
 
 # Step III: Install MySQL-Client form server B
