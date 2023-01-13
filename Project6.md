@@ -43,7 +43,7 @@ Add a rule to the security group by Opening port 3306 on Mysql-server to allow f
 
 
 
-# Step III: Install MySQL-Client form server B
+# Step III: Install MySQL-Client fromm server B
 On mysql client Linux Server install MySQL Client software. 
 ![MYSQL_CLINET_INSATLLED_ORIGINAL](https://user-images.githubusercontent.com/122198373/211243301-4ee1ea97-0856-40e8-ad95-713e489f00ac.png)
 
