@@ -69,5 +69,6 @@ Install the nfs-server on the nfs instance and ensure that it starts on system r
 
 ![nfs_permission_change](https://user-images.githubusercontent.com/122198373/214188829-765d9c6b-c355-49fd-a573-d5af70300cc1.png)
 
-* Export the mounts for webservers’ subnet CIDR to connect as clients. For simplicity, you will install your all three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security. To check your subnet cidr – open your EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
+* Export the mounts for webservers’ subnet CIDR to connect as clients. For simplicity, install all the three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security. To check the subnet CIDR – open the EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
 
+![nfs_AWS_SUBnet_ID](https://user-images.githubusercontent.com/122198373/214191476-ce69762d-cfd0-43cb-94a8-197225b9f852.png)
