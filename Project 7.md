@@ -45,12 +45,7 @@ Create 3 mount points on /mnt directory for the logical volumes as follow:
 
 
 
-
-
-
 Install the nfs-server on the nfs instance and ensure that it starts on system reboot
-
-
 
 
 
@@ -183,7 +178,10 @@ Repeat steps 1-5 for another 2 Web Servers.
 
 + Deploy the tooling website’s code to the Webserver. Ensure that the html folder from the repository is deployed to /var/www/html
 
-* Open TCP port 80 to allow access from the browser
+* Open TCP port 80 to allow access from the browser. Run <public_ip_address>/index.php on a web browser to access the website.
+
+![tooling](https://user-images.githubusercontent.com/122198373/214205618-465a173b-1433-4713-9501-90f496f26756.png)
+
 
 * Disable SElinux using this command: sudo setenforce 0. To make it parmanent use the command below and set SELINUX=disabled
 
@@ -192,3 +190,9 @@ Repeat steps 1-5 for another 2 Web Servers.
 * Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply tooling-db.sql script to your database using this command mysql -h -u -p < tooling-db.sql
 
 Create in MySQL a new admin user with username: myuser and password: password:
+
+![MYQL_connected_GIT](https://user-images.githubusercontent.com/122198373/214205741-716ad06e-d602-46b4-b14e-c45bac3153cf.png)
+
+Login by running the following on the browser <public_ip_address>/login.php.
+
+![image](https://user-images.githubusercontent.com/122198373/214205724-334951b2-d0a9-4d0c-9d46-961bb0f37d24.png)
