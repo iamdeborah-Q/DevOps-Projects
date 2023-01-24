@@ -57,6 +57,9 @@ Install apache2, libxml and then configure apache for loadbalancing via enabling
 
 
 
+![image](https://user-images.githubusercontent.com/122198373/214220256-fec8c291-9a84-40e8-90d3-689add689934.png)
+
+
 
 * Restart apache2 service
 
@@ -89,3 +92,40 @@ sudo vi /etc/apache2/sites-available/000-default.conf
      sudo systemctl restart apache2
 
 
+Note: Only 2 servers were added to the proxy list and also other ways to route traffic aside bytraffic includes byrequests, bybusyness, heartbeats which can be specified in ProxySet lbmethod=? .
+
+
+![image](https://user-images.githubusercontent.com/122198373/214220367-ab14443b-b9bf-4b9d-9a18-aab810ea1541.png)
+
+
+
+If in the Project-7 you mounted /var/log/httpd/ from your Web Servers to the NFS server – unmount them and make sure that each Web Server has its own log directory.
+
+Restart the apache2 server sudo systemctl restart apache2
+
+On the web browser, test the load balancing connection using the public Ip address of our load balancer server. 
+
+![image](https://user-images.githubusercontent.com/122198373/214222734-e7847e60-f08c-4259-96d4-d7fd77e87668.png)
+
+
+
+## CONFIGURE DNS NAMES (Locally)
+
+In order not to always provide webserver private ip address whenever a new web server needs to be added on the list of loadbalancer proxy, we can specify them on the hosts file and provide a domain name for each which suites us
+
+        sudo vi /etc/hosts
+
+![image](https://user-images.githubusercontent.com/122198373/214223976-7ac246e2-fb3d-4780-9a7b-92b3850f588d.png)
+
+![image](https://user-images.githubusercontent.com/122198373/214227651-3306df4e-6380-44be-9d80-70c7710dd185.png)
+
+
+To see this is play we can curl our DNS name on the loadbalancer server. Since the DNS names are local DNS configuration we can only access them locally hence the loadbalancer uses them locally to target the backend web servers
+
+
+Server-1
+![image](https://user-images.githubusercontent.com/122198373/214227319-2af0c0ea-1cc3-423f-af99-1a08feac93f7.png)
+
+Server-2
+
+![image](https://user-images.githubusercontent.com/122198373/214227809-35841806-496d-4546-a949-a9ab4ef27059.png)
