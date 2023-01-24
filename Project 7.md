@@ -71,9 +71,9 @@ Install the nfs-server on the nfs instance and ensure that it starts on system r
 
 * Export the mounts for webservers’ subnet CIDR to connect as clients. For simplicity, install all the three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security. To check the subnet CIDR – open the EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
 
-![nfs_AWS_SUBnet_ID](https://user-images.githubusercontent.com/122198373/214191476-ce69762d-cfd0-43cb-94a8-197225b9f852.png)
 
 
+![image](https://user-images.githubusercontent.com/122198373/214203410-1b2bf4cd-37dd-4084-b75c-74b2b16a3de5.png)
 
 
 Configure access to NFS for clients within the same subnet by editing the following file
@@ -170,3 +170,25 @@ sudo mysql
          sudo systemctl enable php-fpm
 
          setsebool -P httpd_execmem 1
+
+
+
+Repeat steps 1-5 for another 2 Web Servers.
+
+* Verify that Apache files and directories are available on the Web Server in /var/www and also on the NFS server in /mnt/apps. If you see the same files – it means NFS is mounted correctly. You can try to create a new file touch test.txt from one server and check if the same file is accessible from other Web Servers.
+
+- Locate the log folder for Apache on the Web Server and mount it to NFS server’s export for logs. Repeat step №4 to make sure the mount point will persist after reboot.
+
+* Fork the tooling source code from Darey.io Github Account to your Github account. (Learn how to fork a repo here)
+
++ Deploy the tooling website’s code to the Webserver. Ensure that the html folder from the repository is deployed to /var/www/html
+
+* Open TCP port 80 to allow access from the browser
+
+* Disable SElinux using this command: sudo setenforce 0. To make it parmanent use the command below and set SELINUX=disabled
+
+        sudo vi /etc/sysconfig/selinux
+
+* Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply tooling-db.sql script to your database using this command mysql -h -u -p < tooling-db.sql
+
+Create in MySQL a new admin user with username: myuser and password: password:
