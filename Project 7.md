@@ -16,10 +16,6 @@ In this project, i will introduce a set of DevOps tools that will help members o
 
 
 
-
-
-
-
 This project consists of the following servers:
 
     Web server(RHEL)
@@ -68,9 +64,10 @@ Install the nfs-server on the nfs instance and ensure that it starts on system r
 ![nfs_server_run_GIT](https://user-images.githubusercontent.com/122198373/214186105-106006a0-32e4-4fd1-a09e-1fab64a15a1d.png)
 
 
-Set up permission that will allow the Web servers to read, write and execute files on NFS:
+* Set up permission that will allow the Web servers to read, write and execute files on NFS:
 
 
+![nfs_permission_change](https://user-images.githubusercontent.com/122198373/214188829-765d9c6b-c355-49fd-a573-d5af70300cc1.png)
 
-
+* Export the mounts for webservers’ subnet CIDR to connect as clients. For simplicity, you will install your all three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security. To check your subnet cidr – open your EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
 
