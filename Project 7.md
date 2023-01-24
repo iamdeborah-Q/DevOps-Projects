@@ -88,5 +88,8 @@ Configure access to NFS for clients within the same subnet by editing the follow
 
         sudo exportfs -arv
         
+![nfs_expoted_GIGT](https://user-images.githubusercontent.com/122198373/214193452-5dc56c93-314d-48d1-8ef6-ee973e966a13.png)
 
 Checked which port is used ny the NFS server and add it as an inbound rule. rpcinfo -p | grep nfs also for NFS server to be accesible the following inbound ports had to be opened TCP 111, UDP 111, UDP 2049
+![image](https://user-images.githubusercontent.com/122198373/214193852-7d7fa5f2-62fc-45d2-a767-92c4ba15b4e0.png)
+
