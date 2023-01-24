@@ -196,3 +196,11 @@ Create in MySQL a new admin user with username: myuser and password: password:
 Login by running the following on the browser <public_ip_address>/login.php.
 
 ![image](https://user-images.githubusercontent.com/122198373/214205724-334951b2-d0a9-4d0c-9d46-961bb0f37d24.png)
+
+
+Key Takeaways
+
+        I Learned more on Subnet ID and how to create the servers to be on the same Subnet.
+        With LAMP stack knowledge, I was able to create a web soulution with remote Database and NFS servers.
+        More practice on disk partioning and Volume management.
+        
