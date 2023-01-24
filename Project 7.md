@@ -129,12 +129,18 @@ sudo mysql
 
 * Install NFS client
 
-    sudo yum install nfs-utils nfs4-acl-tools -y
+        sudo yum install nfs-utils nfs4-acl-tools -y
+
+
+![WebServer_Nfs_installed](https://user-images.githubusercontent.com/122198373/214200608-3752cef7-c1ea-4967-b3ff-b9c54d3649f0.png)
 
 * Mount /var/www/ and target the NFS server’s export for apps
 
          sudo mkdir /var/www
          sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www
+
+![Nfs_client_we1_mounted_git](https://user-images.githubusercontent.com/122198373/214200744-5dc4cd36-bdb7-4511-a308-24ef05578ae0.png)
+
 
 * Verify that NFS was mounted successfully by running df -h. Make sure that the changes will persist on Web Server after reboot:
 
