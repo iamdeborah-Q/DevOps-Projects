@@ -103,16 +103,18 @@ Note: Use (rpcinfo -p | grep nfs) command to Check which port is used by the NFS
 
 ## STEP-II: CONFIGURE THE DATABASE SERVER
 
-Create an Ubuntu Server on AWS which will serve as our Database. Ensure its in the same subnet as the NFS-Server.
+* Create an Ubuntu Server on AWS which will serve as our Database. Ensure its in the same subnet as the NFS-Server.
 
 Install mysql-server
 
     sudo apt -y update
     sudo apt install -y mysql-server
 
-To enter the DB environment run
+* To enter the DB environment run
 sudo mysql
 
     Create a database and name it tooling
     Create a database user and name it webaccess
     Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
+
+![DB_mysql_created](https://user-images.githubusercontent.com/122198373/214198307-c9abff34-dad1-41cd-828e-415766a47774.png)
