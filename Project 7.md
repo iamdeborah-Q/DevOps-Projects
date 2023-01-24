@@ -200,7 +200,7 @@ Login by running the following on the browser <public_ip_address>/login.php.
 
 Key Takeaways
 
-        I Learned more on Subnet ID and how to create the servers to be on the same Subnet.
+        On this project, I learned more on Subnet ID and how to create servers to be on the same Subnet.
         With LAMP stack knowledge, I was able to create a web soulution with remote Database and NFS servers.
         More practice on disk partioning and Volume management.
         
