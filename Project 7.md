@@ -30,17 +30,13 @@ This project consists of the following servers:
 
 ## STEP I. PREPARING NFS SERVER
 
+- Spin up a new EC2 instance with (RHEL Linux 9 Operating System).
+* Configure LVM on the Server.
+* Create 3 Logical Volumes (lv-apps, lv-logs, and lv-opt)
+* Format the disks as xfs
 
+Create 3 mount points on /mnt directory for the logical volumes as follow:
 
-Spin up a new EC2 instance with RHEL Linux 8 Operating System.
-
-Based on your LVM experience from Project 6, Configure LVM on the Server.
-
-Instead of formating the disks as ext4 you will have to format them as xfs
-
-Creat 3 Logical Volumes. lv-apps, lv-logs, and lv-opt
-
-Create mount points on /mnt directory for the logical volumes as follow:
 
      Mount lv-apps on /mnt/apps – To be used by webservers
      Mount lv-logs on /mnt/logs – To be used by webserver logs
