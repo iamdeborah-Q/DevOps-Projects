@@ -90,7 +90,7 @@ Configure access to NFS for clients within the same subnet by editing the follow
         
 ![nfs_expoted_GIGT](https://user-images.githubusercontent.com/122198373/214193452-5dc56c93-314d-48d1-8ef6-ee973e966a13.png)
 
-Note: Use (rpcinfo -p | grep nfs) command to Check which port is used ny the NFS server and add it as an inbound rule.  Also for NFS server to be accesible the following inbound ports had to be opened TCP 111, UDP 111, UDP 2049
+Note: Use (rpcinfo -p | grep nfs) command to Check which port is used by the NFS server and add it as an inbound rule.  Also for NFS server to be accesible the following inbound ports had to be opened TCP 111, UDP 111, UDP 2049
 
 * To check what port is used by NFS 
 
@@ -100,3 +100,19 @@ Note: Use (rpcinfo -p | grep nfs) command to Check which port is used ny the NFS
 
 ![image](https://user-images.githubusercontent.com/122198373/214194433-bb1ca499-db96-4b68-8901-9b0ac5263c34.png)
 
+
+## STEP-II: CONFIGURE THE DATABASE SERVER
+
+Create an Ubuntu Server on AWS which will serve as our Database. Ensure its in the same subnet as the NFS-Server.
+
+Install mysql-server
+
+    sudo apt -y update
+    sudo apt install -y mysql-server
+
+To enter the DB environment run
+sudo mysql
+
+    Create a database and name it tooling
+    Create a database user and name it webaccess
+    Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
