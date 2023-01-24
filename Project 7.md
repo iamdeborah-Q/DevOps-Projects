@@ -65,6 +65,11 @@ Install the nfs-server on the nfs instance and ensure that it starts on system r
     sudo systemctl status nfs-server.service
 
 
+![nfs_server_run_GIT](https://user-images.githubusercontent.com/122198373/214186105-106006a0-32e4-4fd1-a09e-1fab64a15a1d.png)
+
+
+Set up permission that will allow the Web servers to read, write and execute files on NFS:
+
 
 
 
