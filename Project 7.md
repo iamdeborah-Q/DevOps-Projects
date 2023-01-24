@@ -72,3 +72,21 @@ Install the nfs-server on the nfs instance and ensure that it starts on system r
 * Export the mounts for webservers’ subnet CIDR to connect as clients. For simplicity, install all the three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security. To check the subnet CIDR – open the EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
 
 ![nfs_AWS_SUBnet_ID](https://user-images.githubusercontent.com/122198373/214191476-ce69762d-cfd0-43cb-94a8-197225b9f852.png)
+
+
+
+
+Configure access to NFS for clients within the same subnet by editing the following file
+
+        sudo vi /etc/exports
+
+        /mnt/apps <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+        /mnt/logs <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+        /mnt/opt <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+
+        Esc + :wq!
+
+        sudo exportfs -arv
+        
+
+Checked which port is used ny the NFS server and add it as an inbound rule. rpcinfo -p | grep nfs also for NFS server to be accesible the following inbound ports had to be opened TCP 111, UDP 111, UDP 2049
