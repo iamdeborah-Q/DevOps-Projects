@@ -111,6 +111,7 @@ Install mysql-server
     sudo apt install -y mysql-server
 
 * To enter the DB environment run
+
 sudo mysql
 
     Create a database and name it tooling
@@ -118,3 +119,48 @@ sudo mysql
     Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
 
 ![DB_mysql_created](https://user-images.githubusercontent.com/122198373/214198307-c9abff34-dad1-41cd-828e-415766a47774.png)
+
+
+
+
+## STEP III: PREPARE THE WEBSERVERS
+
+* Launch a new EC2 instance with RHEL 8 Operating System
+
+* Install NFS client
+
+    sudo yum install nfs-utils nfs4-acl-tools -y
+
+* Mount /var/www/ and target the NFS server’s export for apps
+
+         sudo mkdir /var/www
+         sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www
+
+* Verify that NFS was mounted successfully by running df -h. Make sure that the changes will persist on Web Server after reboot:
+
+             sudo vi /etc/fstab
+
+      Add following line
+
+            <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
+
+* Install Remi’s repository, Apache and PHP
+
+     
+         sudo yum install httpd -y
+
+         sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+
+         sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
+
+         sudo dnf module reset php
+
+         sudo dnf module enable php:remi-8.2
+
+         sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+
+         sudo systemctl start php-fpm
+
+         sudo systemctl enable php-fpm
+
+         setsebool -P httpd_execmem 1
