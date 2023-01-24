@@ -45,6 +45,24 @@ Create 3 mount points on /mnt directory for the logical volumes as follow:
 
 
 
+![NFS_mounted_GIT](https://user-images.githubusercontent.com/122198373/214183586-3b596762-54b9-42de-8d51-6a49d328a22d.png)
+
+
+
+
+
+
+Install the nfs-server on the nfs instance and ensure that it starts on system reboot
+
+
+
+
+
+    sudo yum -y update
+    sudo yum install nfs-utils -y
+    sudo systemctl start nfs-server.service
+    sudo systemctl enable nfs-server.service
+    sudo systemctl status nfs-server.service
 
 
 
