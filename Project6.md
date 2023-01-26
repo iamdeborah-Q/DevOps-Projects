@@ -20,4 +20,11 @@ To demonstrate Client-Server architecture we will be using two Ec2 instance with
 
 
 
+
+
+* SSH into the instance and on the EC2 terminal, view the disks attached to the instance. This is achieved using the lsblk command.
+
+
+
+
    
