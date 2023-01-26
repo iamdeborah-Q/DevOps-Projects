@@ -10,4 +10,8 @@ To demonstrate Client-Server architecture we will be using two Ec2 instance with
 
    * Create and configure two Linux-based virtual servers (EC2 instances in AWS).
    * On the EBS console, create 3 storage volumes for the instance. This serves as additional external storage to our EC2 machine
+
+ ![VOLUME_1](https://user-images.githubusercontent.com/122198373/214749494-11626b5d-b809-4283-846d-2bc16cd18ae8.png)
+
+
    
