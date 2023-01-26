@@ -14,4 +14,10 @@ To demonstrate Client-Server architecture we will be using two Ec2 instance with
  ![VOLUME_1](https://user-images.githubusercontent.com/122198373/214749494-11626b5d-b809-4283-846d-2bc16cd18ae8.png)
 
 
+
+
+![Screenshot_20221214_011556](https://user-images.githubusercontent.com/122198373/214753235-49e4f0b7-350a-4e9f-9f1a-535c1c469e04.png)
+
+
+
    
