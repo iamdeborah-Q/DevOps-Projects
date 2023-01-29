@@ -2,7 +2,7 @@
 
 
 
-In previous project [(Project 6()] I implemented a WordPress based solution that is ready to be filled with content and can be used as a full fledged website or blog. Moving further I will add some more value to my solutions that a member of a DevOps team could utilize. 
+In previous project [(Project 6)] I implemented a WordPress based solution that is ready to be filled with content and can be used as a full fledged website or blog. Moving further I will add some more value to my solutions that a member of a DevOps team could utilize. 
 
 
 
@@ -96,7 +96,7 @@ Note: Use (rpcinfo -p | grep nfs) command to Check which port is used by the NFS
 ![image](https://user-images.githubusercontent.com/122198373/214194433-bb1ca499-db96-4b68-8901-9b0ac5263c34.png)
 
 
-## STEP-II: CONFIGURE THE DATABASE SERVER
+## STEP II: CONFIGURE THE DATABASE SERVER
 
 * Create an Ubuntu Server on AWS which will serve as our Database. Ensure its in the same subnet as the NFS-Server.
 
