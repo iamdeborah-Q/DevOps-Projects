@@ -85,3 +85,17 @@ To demonstrate Client-Server architecture we will be using two Ec2 instance with
 - Repeated all the steps taken to configure the web server on the db server. Changed the apps-lv logical volume to db-lv
 
 ![db_verified](https://user-images.githubusercontent.com/122198373/215359020-b8d92b89-80b9-4873-8374-c08daa3560d1.png)
+
+## STEP III: CONFIGURATION WEB SERVER
+
+
+    Run updates and install httpd on web server
+
+yum install -y update
+- sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
+
+    Start web server
+
+- Starting_web_server
+
+![SET_DB_mysql](https://user-images.githubusercontent.com/122198373/215360158-b181bb9b-1f9d-484a-be61-bebda760a35a.png)
