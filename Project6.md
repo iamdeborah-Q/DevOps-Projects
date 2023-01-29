@@ -3,7 +3,6 @@
 Client-Server architecture describe the relationship between two or more connectecd computer sharing data across the network. The computer that request for data is known as the client while the one that processes the request is known as the server.
 In this project, two computers(severs) were made to connect to each other using MySQL which is a Database Management System. The following steps were taken in setting up a client-server architecture using MySQL:
 
-
 ## STEP I:PREPARING WEB SERVER
 
 To demonstrate Client-Server architecture we will be using two Ec2 instance with mysql-server and mysql-client respectively.
@@ -11,15 +10,10 @@ To demonstrate Client-Server architecture we will be using two Ec2 instance with
    * Create and configure two Linux-based virtual servers (EC2 instances in AWS).
    * On the EBS console, create 3 storage volumes for the instance. This serves as additional external storage to our EC2 machine
 
- ![VOLUME_1](https://user-images.githubusercontent.com/122198373/214749494-11626b5d-b809-4283-846d-2bc16cd18ae8.png)
-
+![VOLUME_1](https://user-images.githubusercontent.com/122198373/214749494-11626b5d-b809-4283-846d-2bc16cd18ae8.png)
 
 ![Screenshot_20221214_011556](https://user-images.githubusercontent.com/122198373/214753235-49e4f0b7-350a-4e9f-9f1a-535c1c469e04.png)
 
-
 * SSH into the instance and on the EC2 terminal, view the disks attached to the instance. This is achieved using the lsblk command.
-
-
-
-
    
+![PIC_1](https://user-images.githubusercontent.com/122198373/215355522-baefa535-8d93-4472-a507-a9e5aa9a7b62.png)
