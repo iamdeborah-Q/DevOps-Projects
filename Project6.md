@@ -153,19 +153,19 @@ yum install -y update
 
 ![DB_mysql](https://user-images.githubusercontent.com/122198373/215365510-5a36523f-b49e-4637-8647-d533a8816ad5.png)
 
-- Ensure that we add port 3306 on our db server to allow our web server to access the database server.
+- Open port 3306 on our DB server to allow our web server to allow connection to the database. Also set bind-address to 0.0.0.0
 
 ![Screenshot 2022-12-26 143013](https://user-images.githubusercontent.com/122198373/215365691-5d2643b5-fca0-471f-946f-86700f6465ca.png)
 
 
 
-## Connecting Web Server to DB Server
+## STEP VI: CONFIGURE WORDPRESS TO CONNECT TO REMOTE DATABASE
 
-- Installing mySQl client on the web server so we can connect to the db server
-
+Install MySQL client and test that you can connect from your Web Server to your DB server by using mysql-client
 
         sudo yum install mysql
         sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
+        
 
 ![image](https://user-images.githubusercontent.com/122198373/215366356-efa875eb-8cfa-47ff-8e71-6b8dbbe9552d.png)
 
@@ -175,6 +175,14 @@ yum install -y update
 
 
 ![wordpressImage4](https://user-images.githubusercontent.com/122198373/215366772-528d94b0-7f4b-433b-b0e4-13266a5552ca.png)
+
+
+
+
+
+- In this project I gained practical experience on creating disk partitions, and logical volume in Linux. Also able to do disk management on RHEL( Red Hat   Enterprise Linux OS) - a Linux Distro. Learned WordPress installation and connectivity to a remote MYSQL Database.
+    
+
 
 
 
