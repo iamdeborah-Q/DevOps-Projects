@@ -88,14 +88,94 @@ To demonstrate Client-Server architecture we will be using two Ec2 instance with
 
 ## STEP III: CONFIGURATION WEB SERVER
 
-
-    Run updates and install httpd on web server
+- Run updates and install httpd on web server
 
 yum install -y update
 - sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
 
-    Start web server
+         Start web server
 
 - Starting_web_server
 
+![HTTL_WEB_Created](https://user-images.githubusercontent.com/122198373/215365043-7d56d77a-73dd-489e-8d4c-8051529eee96.png)
+
+
+ - Installing php and its dependencies
+ 
+
+        sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+        sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
+        sudo yum module list php
+        sudo yum module reset php
+        sudo yum module enable php:remi-8.2
+        sudo yum install php php-opcache php-gd php-curl php-mysqlnd
+        sudo systemctl start php-fpm
+        sudo systemctl enable php-fpm
+        setsebool -P httpd_execmem 1
+
+  - Restarting Apache: sudo systemctl restart httpd
+
+  - Downloading wordpress and moving it into the web content directory
+  
+
+        mkdir wordpress
+        cd   wordpress
+        sudo wget http://wordpress.org/latest.tar.gz
+        sudo tar xzvf latest.tar.gz
+        sudo rm -rf latest.tar.gz
+        cp wordpress/wp-config-sample.php wordpress/wp-config.php
+        cp -R wordpress /var/www/html/
+
+ - Configure SELinux Policies
+ 
+
+        sudo chown -R apache:apache /var/www/html/wordpress
+        sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
+        sudo setsebool -P httpd_can_network_connect=1
+      
+
+- Starting database server
+
 ![SET_DB_mysql](https://user-images.githubusercontent.com/122198373/215360158-b181bb9b-1f9d-484a-be61-bebda760a35a.png)
+
+## STEP IV: INSTALLING MySQL ON DATABASE (DB) SERVER
+
+        sudo yum update
+        sudo yum install mysql-server
+        
+- To ensure that database server starts automatically on reboot or system startup
+
+
+        sudo systemctl restart mysqld
+        sudo systemctl enable mysqld
+
+## STEP V: SETTING UP THE DATABASE (DB) SERVER
+
+![DB_mysql](https://user-images.githubusercontent.com/122198373/215365510-5a36523f-b49e-4637-8647-d533a8816ad5.png)
+
+- Ensure that we add port 3306 on our db server to allow our web server to access the database server.
+
+![Screenshot 2022-12-26 143013](https://user-images.githubusercontent.com/122198373/215365691-5d2643b5-fca0-471f-946f-86700f6465ca.png)
+
+
+
+## Connecting Web Server to DB Server
+
+- Installing mySQl client on the web server so we can connect to the db server
+
+
+        sudo yum install mysql
+        sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
+
+![image](https://user-images.githubusercontent.com/122198373/215366356-efa875eb-8cfa-47ff-8e71-6b8dbbe9552d.png)
+
+- On the web browser, access web server using the public ip address of the server
+
+![image](https://user-images.githubusercontent.com/122198373/215366557-745097b5-9fec-4d91-be51-ac8ccd273043.png)
+
+
+![wordpressImage4](https://user-images.githubusercontent.com/122198373/215366772-528d94b0-7f4b-433b-b0e4-13266a5552ca.png)
+
+
+
+
