@@ -1,6 +1,6 @@
 # LOAD BALANCER SOLUTION WITH NGINX AND SSL/TLS
 
-In this project I would be implementing a Nginx Load Balancer, create a domain(using AWS Route 53), and also to configure a secure connection using SSL/TLS certificates, which secures the website from Man in the Middle Attack.
+In this project I would be implementing a Nginx Load Balancer, create a domain(using AWS Route 53), and also to configure a secure connection using SSL/TLS certificates, which secures the website from Man in the Middle attack. 
 
 ## CONFIGURE NGINX AS A LOAD BALANCER
 * Create an EC2 VM based on Ubuntu Server 20.04 LTS and name it Nginx LB (do not forget to open TCP port 80 for HTTP connections, also open TCP port 443 – this port is used for secured HTTPS connections)
