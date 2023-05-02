@@ -79,7 +79,7 @@ In this project I would be implementing a Nginx Load Balancer, create a domain(u
 
 
 
-- Request your certificate (just follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for, domain name will be looked up from nginx.conf file so make sure you have updated it on step 4).
+- Request your certificate (follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for, domain name will be looked up from nginx.conf file so make sure you have updated it on step 4).
 
 
 ![image](https://user-images.githubusercontent.com/122198373/218607162-4e7bf7ef-d3b1-4279-812c-eb65fa19034c.png)
