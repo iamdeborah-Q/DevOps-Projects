@@ -29,3 +29,9 @@ Create a hosted zone in AWS, and map it to your free domain from Freenom. Watch 
 
 
 ![image](https://user-images.githubusercontent.com/122198373/235619396-fa99f889-864f-4403-a323-e7145d4e1e02.png)
+      
+      NOTE : As you proceed with configuration, ensure that all resources are appropriately tagged, for example:
+
+                Project:
+                Environment:
+                Automated: (If you create a recource using an automation tool, it would be )
