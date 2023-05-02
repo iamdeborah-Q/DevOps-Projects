@@ -11,4 +11,21 @@ Cost, Security, and Scalability are the major requirements for this project. Hen
 ![image](https://user-images.githubusercontent.com/122198373/235584926-2ec2d10f-7f36-41d9-85fd-b548f784a7f1.png)
 
 
-#STEP 1: Starting Off AWS Project
+STEP 1: Starting Off AWS Project
+
+
+Properly configure your AWS account and Organization Unit Watch How To Do This Here
+Create an AWS Master account. (Also known as Root Account)
+
+Within the Root account, create a sub-account and name it DevOps. (You will need another email address to complete this)
+
+Within the Root account, create an AWS Organization Unit (OU). Name it Dev. (We will launch Dev resources in there) Move the DevOps account into the Dev OU.
+
+Login to the newly created AWS account using the new email address.
+
+Create a free domain name for your fictitious company at Freenom domain registrar here.
+
+Create a hosted zone in AWS, and map it to your free domain from Freenom. Watch how to do that here
+
+
+![image](https://user-images.githubusercontent.com/122198373/235619396-fa99f889-864f-4403-a323-e7145d4e1e02.png)
