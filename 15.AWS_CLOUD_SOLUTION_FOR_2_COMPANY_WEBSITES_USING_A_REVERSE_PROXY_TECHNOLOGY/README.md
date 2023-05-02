@@ -9,3 +9,6 @@ Cost, Security, and Scalability are the major requirements for this project. Hen
 ## Project Design Architecture Diagram
 
 ![image](https://user-images.githubusercontent.com/122198373/235584926-2ec2d10f-7f36-41d9-85fd-b548f784a7f1.png)
+
+
+STEP 1: Starting Off AWS Project
