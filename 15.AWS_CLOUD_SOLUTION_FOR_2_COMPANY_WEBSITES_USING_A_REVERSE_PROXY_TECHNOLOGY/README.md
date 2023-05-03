@@ -77,3 +77,8 @@ STEP II : Setting Up the Infractructure
 
 ![image](https://user-images.githubusercontent.com/122198373/235828132-f6b12171-e4d4-48db-ba1c-c2d7da9ed332.png)
 
+
+
+5. Create an Internet Gateway
+
+![image](https://user-images.githubusercontent.com/122198373/235828575-a3fb989e-06c3-486b-893f-dd1c36f8360a.png)
