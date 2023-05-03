@@ -55,3 +55,25 @@ STEP II : Setting Up the Infractructure
 
 
 ![image](https://user-images.githubusercontent.com/122198373/235823045-21123c3d-4795-453b-9430-66b6eedf6b03.png)
+
+
+
+
+
+3. Create a route table and associate it with public subnets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Create a route table and associate it with private subnets
