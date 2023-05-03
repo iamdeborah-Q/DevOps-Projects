@@ -35,3 +35,23 @@ Create a hosted zone in AWS, and map it to your free domain from Freenom. Watch 
                 Project:
                 Environment:
                 Automated: (If you create a recource using an automation tool, it would be )
+
+STEP II : Setting Up the Infractructure
+
+1. Create VPC ( Virtual Private Cloud)
+
+![Screenshot 2023-05-02 050130](https://user-images.githubusercontent.com/122198373/235823233-8331af59-6601-4e14-9ecb-82a05492bc38.png)
+
+
+
+
+
+
+
+
+
+2. Create subnets as shown in the architecture
+
+
+
+![image](https://user-images.githubusercontent.com/122198373/235823045-21123c3d-4795-453b-9430-66b6eedf6b03.png)
